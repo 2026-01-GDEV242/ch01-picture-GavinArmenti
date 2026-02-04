@@ -20,10 +20,10 @@ public class Picture
     private Square hull;
     private Square hood;
     private Square trunk;
-    private Triangle windshield;
+    private Triangle FdoorHandle;
     private Circle Fwheel;
     private Circle Rwheel;
-    private Person driver;
+    private Person hoodOrnament;
     private boolean drawn;
 
     /**
@@ -38,10 +38,10 @@ public class Picture
         hull = new Square();
         hood = new Square();
         trunk = new Square();
-        windshield = new Triangle();
+        FdoorHandle = new Triangle();
         Fwheel = new Circle();
         Rwheel = new Circle();
-        driver = new Person();
+        hoodOrnament = new Person();
         drawn = false;
     }
 
@@ -74,39 +74,46 @@ public class Picture
             sun.makeVisible();
             */
            
-           driver.moveHorizontal(65);
-           driver.makeVisible();
+
            
-           windshield.changeSize(50,50);
-           windshield.moveHorizontal(50);
-           windshield.moveVertical(25);
-           windshield.makeVisible();
+           hoodOrnament.moveVertical(-50);
+           hoodOrnament.moveHorizontal(20);
+           hoodOrnament.changeSize(30,15);
+           hoodOrnament.makeVisible();
            
            hull.changeSize(100);
+           hull.moveVertical(-25);
+           hull.moveHorizontal(-150);
            hull.makeVisible();
            
            hood.changeSize(50);
-           hood.moveHorizontal(50);
-           hood.moveVertical(-25);
+           hood.moveHorizontal(-50);
+           hood.moveVertical(25);
            hood.makeVisible();
            
            trunk.changeSize(50);
-           trunk.moveHorizontal(-50);
-           trunk.moveVertical(-25);
+           trunk.moveHorizontal(-200);
+           trunk.moveVertical(25);
            trunk.makeVisible();
            
-           Fwheel.changeSize(25);
-           Fwheel.moveHorizontal(40);
-           Fwheel.moveVertical(-35);
+           Fwheel.changeSize(50);
+           Fwheel.moveHorizontal(10);
+           Fwheel.moveVertical(75);
            Fwheel.makeVisible();
+           Fwheel.changeColor("black");
            
-           Rwheel.changeSize(25);
-           Rwheel.moveHorizontal(-40);
-           Rwheel.moveVertical(-35);
+           Rwheel.changeSize(50);
+           Rwheel.moveHorizontal(-100);
+           Rwheel.moveVertical(75);
            Rwheel.makeVisible();
+           Rwheel.changeColor("black");
            
+           FdoorHandle.changeSize(-20,20);
+           FdoorHandle.moveHorizontal(20);
+           FdoorHandle.moveVertical(15);
+           FdoorHandle.makeVisible();
            
-            drawn = true;
+           drawn = true;
         }
     }
 
@@ -119,6 +126,14 @@ public class Picture
         window.changeColor("white");
         roof.changeColor("black");
         sun.changeColor("black");*/
+        
+        hull.changeColor("black");
+        hood.changeColor("black");
+        trunk.changeColor("black");
+        FdoorHandle.changeColor("white");
+        Fwheel.changeColor("black");
+        Rwheel.changeColor("black");
+        //hoodOrnament.changeColor("black");
     }
 
     /**
@@ -130,5 +145,13 @@ public class Picture
         window.changeColor("black");
         roof.changeColor("green");
         sun.changeColor("yellow");*/
+        
+        hull.changeColor("red");
+        hood.changeColor("red");
+        trunk.changeColor("red");
+        FdoorHandle.changeColor("green");
+        //Fwheel.changeColor("black");
+        //Rwheel.changeColor("black");
+        //hoodOrnament.changeColor("black");
     }
 }
